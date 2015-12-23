@@ -38,6 +38,7 @@
 			break;
 		default:
 			frequence = 0;
+			fr_jour = 0;
 		}
-		return frequence;
+		return fr_jour;
 	}
