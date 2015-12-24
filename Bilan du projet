@@ -2,21 +2,36 @@
 -------------------------------------------------
 
 Globalement, ce projet était un petit peu compliqué pour nous. En effet, la génération de planning est quelque chose que nous
-n'avions jamais fait. De plus nos connaissances en Java était restreintes et la mise en pratique de celles-cis a été longue.
+n'avions jamais faite. De plus nos connaissances en Java étaient restreintes et la mise en pratique de celles-ci a été longue.
 Le manque de disponibilité nous a aussi beaucoup pénalisé (entre les cours, l'entreprise, les activités extra-scolaires, les
-weekends de non-disponibilité, les congés de noël, l'arrêt maladie de Claire, il a été très dificile de trouver du temps pour
-avancer le projet).
+weekends de non-disponibilité, les congés de noël, il a été très dificile de trouver du temps pour avancer le projet).
 
-Nous avons coder ce projet au plus simple pour nous, il n'est donc pas du tout optimisé.
+Nous avons codé ce projet au plus simple pour nous, il n'est donc pas optimisé.
 Nous avons beaucoup de code avec des conditions, des cases, beaucoup de variables. Ces éléments peuvent être contournés et
 optimisés (par un foreach pour éviter les if à répitions par exemple). Apprendre et mettre en place ces optimisations
 représentaient pour nous une charge de travail beaucoup plus élevée, et donc une durée de projet plus longue et, en vue de nos
-disponibilité, ce n'était pas envisageable.
+disponibilités, ce n'était pas envisageable. Nous avons donc été contraints de retirer du projet certaines classes comme la classe Repas et la classe 
+Nourriture ou encore de désorganiser certains éléments de code dans le projet.
 
-Pour l'amélioration du projet, il faut prendre en compte toutes les optimisations. De plus, nous pouvons rajouter une
-interface graphique sur la génération du planning. Il faudrait aussi gérer les années bissextiles des autres (chose que nous
-n'avons pas eu le temps de faire).
+Pour l'amélioration du projet, il aurait fallu une meilleure optimisation technique. Voici les optimisations que nous avons envisagées :
+- Séparer le code en plus de classe (avec une classe Nourriture pour le type et le prix de nourriture, et une autre classe
+Repas avec la le cout d'un repas
+- Ajouter une base de données permettant de mieux manipuler les données de l'application et d'alléger le code source
+- De plus, nous souhaitions intégrer une interface graphique à l'application. Celle-ci aurait permis à l'utilisateur de lancer l'exe de l'application
+de cliquer sur un bouton "Générer le planning du [date_actuelle]".
+- Nous aurions également voulu que le fichier généré puisse se télécharger à un autre endroit du disque dur (il se télécharge 
+actuellement dans le workspace de l'application)
+- Nous aurions dû aussi gérer les années bissextiles des autres années (chose que nous n'avons pas eu le temps de faire).
+- La répartition des animaux sur les intervenants aurait dû être mieux gérée
 
-Pour une réelle utilisation de cette application, il faudrait mieux gérer la répartitions des animaux sur les intervenants,
-il faudrait prendre en compte les durées de trajet entre chaque cage, la proximité d'une cage par rapport à une autre, le
-stock de nourriture, l'ajout/suppression d'animaux, la modification de la nourriture ainsi que son prix.
+Enfin, en vue de l'amélioration fonctionnelle de cette application ainsi que d'une utilisation plus efficace et pertinente, voici les points
+que nous aurions modifiés :
+- Il faudrait prendre en compte les durées de trajet entre chaque cage, 
+- La proximité d'une cage par rapport à une autre, 
+- Le stock de nourriture, 
+- L'ajout/suppression d'animaux, 
+- La modification de la nourriture ainsi que son prix.
+
+Pour conclure, ce projet nous a permis d'acquérir rapidemment de nouvelles connaissances en Java et de mieux comprendre le fonctionnement
+et la conception d'une application. Nous aurions souhaité parvenir à un meilleur rendu tant technique que fonctionnel, nous n'avions malheureusement
+pas eu assez de temps et de compétences pour aboutir aux objectifs que nous nous étions fixés.
