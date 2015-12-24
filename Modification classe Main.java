@@ -11,6 +11,20 @@ public class Main {
 		Animaux Antilopes = new Animaux("Antilopes",15,25,"Chaque soir", 0,0,2,0);
 		Animaux Chimpanzes = new Animaux("Chimpanzés",9,20,"Chaque matin et soir", 0.1,0.1,0,0.2);
 		Animaux Crocodile = new Animaux("Crocodiles",2,60,"Une fois par semaine", 20,0,0,0);
+		Animaux Elephant = new Animaux("Eléphants",3,45,"Chaque matin", 0,0,70,0);
+		Animaux FlamantRose = new Animaux("Flamants Roses",21,20,"Chaque soir", 0,0,0,1);
+		Animaux Guepard = new Animaux("Guépards",1,10,"Chaque soir", 15,0,0,0);
+		Animaux Girafe = new Animaux("Girafes",6,25,"Chaque matin", 0,0,30,0);
+		Animaux Otarie = new Animaux("Otaries",12,30,"Chaque matin et soir", 0,6,0,0);
+		Animaux Lion = new Animaux("Lions",3,15,"Tous les deux soirs", 40,0,0,0);
+		Animaux Ouistiti = new Animaux("Ouistitis",11,20,"Chaque matin et soir", 0,0.2,0,0.2);
+		Animaux Ours = new Animaux("Ours",3,45,"Chaque soir", 10,10,0,0);
+		Animaux Panda = new Animaux("Pandas",2,15,"Matin, midi et soir", 0,0,25,0);
+		Animaux Perroquets = new Animaux("Perroquets",6,10,"Une fois tous les deux matins", 0,0,0,0.3);
+		Animaux PorcEpic = new Animaux("Porc-épics",10,10,"Chaque soir", 0,0,0.5,0.15);
+		Animaux Tigre = new Animaux("Tigres",4,45,"Deux matins par semaine", 80,0,0,0);
+		Animaux Tortue = new Animaux("Tortues",20,15,"Chaque soir", 0,0,0,0.15);
+		Animaux Zebre = new Animaux("Zèbres",7,25,"Chaque matin et soir", 0,0,5,0);
 		// On doit instancier ici les autres animaux dans l'ordre de la doc'
 		
 		// Instanciation des objets de la classe Intervenants
