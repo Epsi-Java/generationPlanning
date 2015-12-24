@@ -1,0 +1,19 @@
+public double CalculerQuantiteTotale(){
+		int quantite_totale_viande = (Chimpanze.getQuantiteViande()*Chimpaze.getNombreAnimaux()) + (Crocodile.getQuantiteViande()*Crocodile.getNombreAnimaux()) + (Guepard.getQuantiteViande()*Guepard.getNombreAnimaux()) + (Lion.getQuantiteViande()*Lion.getNombreAnimaux()) + (Ours.getQuantiteViande()*Ours.getNombreAnimaux()) + (Tigre.getQuantiteViande()*Tigre.getNombreAnimaux());
+		int quantite_totale_poisson = (Chimpanze.getQuantitePoisson()*Chimpanze.getNombreAnimaux()) + (Otarie.getQuantitePoisson()*Otarie.getNombreAnimaux()) + (Ouistiti.getQuantitePoisson()*Ouistiti.getNombreAnimaux()) + (Ours.getQuantitePoisson()*Ours.getNombreAnimaux());
+		int quantite_totale_fourrage = (Antilope.getQuantiteFourrage()*Antilope.getNombreAnimaux()) + (Elephant.getQuantiteFourrage()*Elephant.getNombreAnimaux()) + (Girafe.getQuantiteFourrage()*Girafe.getNombreAnimaux()) + (Panda.getQuantiteFourrage()*Panda.getNombreAnimaux()) + (PorcEpic.getQuantiteFourrage()*PorcEpic.getNombreAnimaux()) + (Zebre.getQuantiteFourrage()*Zebre.getNombreAnimaux());
+		int quantite_totale_graines = (Chimpanze.getQuantiteGraines()*Chimpanze.getNombreAnimaux()) + (FlamantRose.getQuantiteGraines()*FlamantRose.getNombreAnimaux()) + (Ouistiti.getQuantiteGraines()*Ouistiti.getNombreAnimaux()) + (Perroquets.getQuantiteGraines()*Perroquets.getNombreAnimaux()) + (PorcEpic.getQuantiteGraines()*PorcEpic.getNombreAnimaux()) + (Tortue.getQuantiteGraines()*Tortue.getNombreAnimaux());
+		double prout = 0;
+		return prout;
+	}
+	
+	public double CalculerCoutTotal(int quantite_totale_viande, int quantite_totale_poisson, int quantite_totale_fourrage, int quantite_totale_graines){
+		int cout_total_viande = quantite_totale_viande*5;
+		int cout_total_poisson = quantite_totale_poisson*7;
+		int cout_total_fourrage = quantite_totale_fourrage;
+		int cout_total_graines = quantite_totale_graines*4;
+		
+		double cout_total = cout_total_viande + cout_total_poisson + cout_total_fourrage + cout_total_graines;
+		
+		return cout_total;
+	}
