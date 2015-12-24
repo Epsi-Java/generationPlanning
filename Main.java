@@ -2,6 +2,7 @@ package fr.epsi.app;
 import fr.epsi.model.*;
 import fr.epsi.app.Actions;
 import java.io.*;
+import java.util.GregorianCalendar;
 
 public class Main {
 
@@ -31,16 +32,53 @@ public class Main {
 		Intervenants John = new Intervenants("Kramer", "John");
 		Intervenants Claude = new Intervenants("Bourgelat", "Claude");
 		
-		// déclaration des variables de date (jour et impair déclaré a la zeub en attendant que mon pote m'aide pour gérer la date du jour)
-		String jour = "bonjour";
+		// déclaration des variables de date
+		GregorianCalendar calendar = new GregorianCalendar();
+		int nb_jour = calendar.get(GregorianCalendar.DATE);
+		int num_jour = calendar.get(GregorianCalendar.DAY_OF_WEEK_IN_MONTH);
+		
+		String jour = "";
 		Boolean impair = false;
+		
+		if ( (nb_jour % 2) == 0) {
+			impair = false;
+		} else {
+			impair = true;
+		}
+		
+ 		switch(num_jour){
+ 		case 1:
+ 			jour = "Lundi";
+ 			break;
+ 		case 2:
+ 			jour = "Mardi";
+ 			break;
+ 		case 3:
+ 			jour = "Mercredi";
+ 			break;
+ 		case 4:
+ 			jour = "Jeudi";
+ 			break;
+ 		case 5:
+ 			jour = "Vendredi";
+ 			break;
+ 		case 6:
+ 			jour = "Samedi";
+ 			break;
+ 		case 7:
+ 			jour = "Dimanche";
+ 			break;
+  		default:
+  			jour = "";
+  		
+  	}
 		
 		// Calcul quantite totale par type de nourriture : on doit le faire ici car on utilise des objets instanciés dans le main
 		double quantite_totale_viande = (Chimpanzes.getQuantiteViande()*Chimpanzes.getNombreAnimaux()*Chimpanzes.getFrJour()) + (Guepard.getQuantiteViande()*Guepard.getNombreAnimaux()*Guepard.getFrJour()) + (Ours.getQuantiteViande()*Ours.getNombreAnimaux()*Ours.getFrJour());
 		double quantite_totale_poisson = (Chimpanzes.getQuantitePoisson()*Chimpanzes.getNombreAnimaux()*Chimpanzes.getFrJour()) + (Otarie.getQuantitePoisson()*Otarie.getNombreAnimaux()*Otarie.getFrJour()) + (Ouistiti.getQuantitePoisson()*Ouistiti.getNombreAnimaux()*Ouistiti.getFrJour()) + (Ours.getQuantitePoisson()*Ours.getNombreAnimaux()*Ours.getFrJour());
 		double quantite_totale_fourrage = (Antilopes.getQuantiteFourrage()*Antilopes.getNombreAnimaux()*Antilopes.getFrJour()) + (Elephant.getQuantiteFourrage()*Elephant.getNombreAnimaux()*Elephant.getFrJour()) + (Girafe.getQuantiteFourrage()*Girafe.getNombreAnimaux()*Girafe.getFrJour()) + (Panda.getQuantiteFourrage()*Panda.getNombreAnimaux()*Panda.getFrJour()) + (PorcEpic.getQuantiteFourrage()*PorcEpic.getNombreAnimaux()*PorcEpic.getFrJour()) + (Zebre.getQuantiteFourrage()*Zebre.getNombreAnimaux()*Zebre.getFrJour());
 		double quantite_totale_graines = (Chimpanzes.getQuantiteGraines()*Chimpanzes.getNombreAnimaux()*Chimpanzes.getFrJour()) + (FlamantRose.getQuantiteGraines()*FlamantRose.getNombreAnimaux()*FlamantRose.getFrJour()) + (Ouistiti.getQuantiteGraines()*Ouistiti.getNombreAnimaux()*Ouistiti.getFrJour()) + (PorcEpic.getQuantiteGraines()*PorcEpic.getNombreAnimaux()*PorcEpic.getFrJour()) + (Tortue.getQuantiteGraines()*Tortue.getNombreAnimaux()*Tortue.getFrJour());
-		if (jour =="lundi"){
+		if (jour =="Lundi"){
 			quantite_totale_viande += (Crocodile.getQuantiteViande()*Crocodile.getNombreAnimaux());
 		}
 		if (impair == true){
