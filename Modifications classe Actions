@@ -1,0 +1,21 @@
+package fr.epsi.app;
+import fr.epsi.model.*;
+
+/* Regroupe les fonctions principales de l'application qui ne concernent pas directement une classe
+ * Calculer Cout repas
+ * Calculer quantite repas
+ * calculer nb_intervenant 
+ * génération planning etc...
+*/
+public class Actions {
+	
+	public static double CalculerCoutTotal(double quantite_totale_viande, double quantite_totale_poisson, double quantite_totale_fourrage, double quantite_totale_graines){
+		double cout_total_viande = quantite_totale_viande*5;
+		double cout_total_poisson = quantite_totale_poisson*7;
+		double cout_total_fourrage = quantite_totale_fourrage;
+		double cout_total_graines = quantite_totale_graines*4;
+		
+		double cout_total = cout_total_viande + cout_total_poisson + cout_total_fourrage + cout_total_graines;
+		
+		return cout_total;
+	}
