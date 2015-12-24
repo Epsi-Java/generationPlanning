@@ -40,6 +40,10 @@ public class Main {
 		// On utilise la fonction dans Actions pour calculer le cout total de la nourriture
 		double cout_total = Actions.CalculerCoutTotal(quantite_totale_viande, quantite_totale_poisson, quantite_totale_fourrage, quantite_totale_graines);
 		
+		// déclaration des variables utilisées pour le calcul du nombre d'intervenants
+		// Attention j'ai du modifier 2 truc dans Animaux.java ! (static)
+		String frequence_repas = Animaux.getFrequencerepas();
+		int duree_nourrir = Animaux.getDureeRepas();
 		
 		//Generation fichier
 		File generationPlanning = new File("Génération Planning.txt");
