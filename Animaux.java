@@ -24,43 +24,33 @@ public class Animaux {
 		quantite_poisson = pQuantite_poisson;
 		quantite_fourrage = pQuantite_fourrage;
 		quantite_graines = pQuantite_graines;
-	 		double frequence = 0;	 		
 	 		
 	 		switch(pFrequence_repas){
 	 		case "Chaque matin et soir":
-	 			frequence = 14;
 	 			fr_jour = 2;
 	 			break;
 	 		case "Chaque matin":
-	 			frequence = 7;
 	 			fr_jour = 1;
 	 			break;
 	 		case "Chaque soir":
-	 			frequence = 7;
 	 			fr_jour = 1;
 	 			break;
 	 		case "Matin, midi et soir":
-	 			frequence = 21;
 	 			fr_jour = 3;
 	 			break;
 	 		case "Une fois par semaine":
-	 			frequence = 1;
 	 			fr_jour = 1;
 	 			break;
 	 		case "Tous les deux soirs":
-	 			frequence = 3.5;
 	 			fr_jour = 1;
 	 			break;
 	 		case "Une fois tous les deux matins":
-	 			frequence = 3.5;
 	 			fr_jour = 1;
 	 			break;
 	 		case "Deux matins par semaine":
-	 			frequence = 2;
 	 			fr_jour = 1;
 	  			break;
 	  		default:
-	  			frequence = 0;
 	  			fr_jour = 0;
 	  		
 	  	}
