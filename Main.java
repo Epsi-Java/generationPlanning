@@ -41,9 +41,17 @@ public class Main {
 		double cout_total = Actions.CalculerCoutTotal(quantite_totale_viande, quantite_totale_poisson, quantite_totale_fourrage, quantite_totale_graines);
 		
 		// déclaration des variables utilisées pour le calcul du nombre d'intervenants
-		// Attention j'ai du modifier 2 truc dans Animaux.java ! (static)
 		String frequence_repas = Animaux.getFrequencerepas();
 		int duree_nourrir = Animaux.getDureeRepas();
+		// jour et impair déclaré a la zeub en attendant que mon pote m'aide pour gérer la date du jour
+		String jour = "bonjour";
+		Boolean impair = false;
+		
+		// On utilise la fonction dans Actions pour le nombre d'intervenants
+		double nb_inter_mat = Actions.CalculerIntervenantMatin(frequence_repas, duree_nourrir, jour, impair);
+		double nb_inter_soir = Actions.CalculerIntervenantSoir(frequence_repas, duree_nourrir, jour, impair);
+		double duree_totale_midi = 15;
+		double nb_inter_midi = 1;
 		
 		//Generation fichier
 		File generationPlanning = new File("Génération Planning.txt");
@@ -76,6 +84,14 @@ public class Main {
 		  
 		  // On écrit le cout total en euro de la nourriture
 		  planningWrite.write("Cout total : "+cout_total+"€");
+		  planningWrite.write ("\r\n\r\n"); 
+		  
+		  // On écrit le nombre d'intervenant minimum
+		  planningWrite.write("Nombre d'intervenant minimum pour ce matin : "+nb_inter_mat);
+		  planningWrite.write ("\r\n\r\n"); 
+		  planningWrite.write("Nombre d'intervenant minimum pour ce midi : "+nb_inter_midi);
+		  planningWrite.write ("\r\n\r\n"); 
+		  planningWrite.write("Nombre d'intervenant minimum pour ce soir : "+nb_inter_soir);
 		  planningWrite.write ("\r\n\r\n"); 
 		  
 		  // On arrête l'écriture et on enregistre les modifications
