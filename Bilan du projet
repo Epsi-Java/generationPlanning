@@ -1,0 +1,22 @@
+// fichier à compléter si besoin
+-------------------------------------------------
+
+Globalement, ce projet était un petit peu compliqué pour nous. En effet, la génération de planning est quelque chose que nous
+n'avions jamais fait. De plus nos connaissances en Java était restreintes et la mise en pratique de celles-cis a été longue.
+Le manque de disponibilité nous a aussi beaucoup pénalisé (entre les cours, l'entreprise, les activités extra-scolaires, les
+weekends de non-disponibilité, les congés de noël, l'arrêt maladie de Claire, il a été très dificile de trouver du temps pour
+avancer le projet).
+
+Nous avons coder ce projet au plus simple pour nous, il n'est donc pas du tout optimisé.
+Nous avons beaucoup de code avec des conditions, des cases, beaucoup de variables. Ces éléments peuvent être contournés et
+optimisés (par un foreach pour éviter les if à répitions par exemple). Apprendre et mettre en place ces optimisations
+représentaient pour nous une charge de travail beaucoup plus élevée, et donc une durée de projet plus longue et, en vue de nos
+disponibilité, ce n'était pas envisageable.
+
+Pour l'amélioration du projet, il faut prendre en compte toutes les optimisations. De plus, nous pouvons rajouter une
+interface graphique sur la génération du planning. Il faudrait aussi gérer les années bissextiles des autres (chose que nous
+n'avons pas eu le temps de faire).
+
+Pour une réelle utilisation de cette application, il faudrait mieux gérer la répartitions des animaux sur les intervenants,
+il faudrait prendre en compte les durées de trajet entre chaque cage, la proximité d'une cage par rapport à une autre, le
+stock de nourriture, l'ajout/suppression d'animaux, la modification de la nourriture ainsi que son prix.
