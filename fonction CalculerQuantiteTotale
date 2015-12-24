@@ -1,7 +1,0 @@
-	public double CalculerQuantiteTotale(Boolean mange, double fr_jour, double quantite, int nb_animaux){
-		double quantite_totale = 0;
-		if (mange == true){
-			quantite_totale += fr_jour*quantite*nb_animaux;
-		}
-		return quantite_totale;
-	}
