@@ -25,17 +25,17 @@ public class Main {
 		Animaux Tigre = new Animaux("Tigres",4,45,"Deux matins par semaine", 80,0,0,0);
 		Animaux Tortue = new Animaux("Tortues",20,15,"Chaque soir", 0,0,0,0.15);
 		Animaux Zebre = new Animaux("Zèbres",7,25,"Chaque matin et soir", 0,0,5,0);
-		// On doit instancier ici les autres animaux dans l'ordre de la doc'
 		
 		// Instanciation des objets de la classe Intervenants
 		Intervenants Patrick = new Intervenants("Suez", "Patrick");
+		Intervenants John = new Intervenants("Kramer", "John");
+		Intervenants Claude = new Intervenants("Bourgelat", "Claude");
 		
 		// Calcul quantite totale par type de nourriture : on doit le faire ici car on utilise des objets instanciés dans le main
-		// On enlève les commentaires au fur et à mesure qu'on a instancié les autres animaux
-		double quantite_totale_viande = (Chimpanzes.getQuantiteViande()*Chimpanzes.getNombreAnimaux());// + (Crocodile.getQuantiteViande()*Crocodile.getNombreAnimaux()) + (Guepard.getQuantiteViande()*Guepard.getNombreAnimaux()) + (Lion.getQuantiteViande()*Lion.getNombreAnimaux()) + (Ours.getQuantiteViande()*Ours.getNombreAnimaux()) + (Tigre.getQuantiteViande()*Tigre.getNombreAnimaux());
-		double quantite_totale_poisson = (Chimpanzes.getQuantitePoisson()*Chimpanzes.getNombreAnimaux()); //+ (Otarie.getQuantitePoisson()*Otarie.getNombreAnimaux()) + (Ouistiti.getQuantitePoisson()*Ouistiti.getNombreAnimaux()) + (Ours.getQuantitePoisson()*Ours.getNombreAnimaux());
-		double quantite_totale_fourrage = (Antilopes.getQuantiteFourrage()*Antilopes.getNombreAnimaux());// + (Elephant.getQuantiteFourrage()*Elephant.getNombreAnimaux()) + (Girafe.getQuantiteFourrage()*Girafe.getNombreAnimaux()) + (Panda.getQuantiteFourrage()*Panda.getNombreAnimaux()) + (PorcEpic.getQuantiteFourrage()*PorcEpic.getNombreAnimaux()) + (Zebre.getQuantiteFourrage()*Zebre.getNombreAnimaux());
-		double quantite_totale_graines = (Chimpanzes.getQuantiteGraines()*Chimpanzes.getNombreAnimaux()); //+ (FlamantRose.getQuantiteGraines()*FlamantRose.getNombreAnimaux()) + (Ouistiti.getQuantiteGraines()*Ouistiti.getNombreAnimaux()) + (Perroquets.getQuantiteGraines()*Perroquets.getNombreAnimaux()) + (PorcEpic.getQuantiteGraines()*PorcEpic.getNombreAnimaux()) + (Tortue.getQuantiteGraines()*Tortue.getNombreAnimaux());
+		double quantite_totale_viande = (Chimpanzes.getQuantiteViande()*Chimpanzes.getNombreAnimaux()) + (Crocodile.getQuantiteViande()*Crocodile.getNombreAnimaux()) + (Guepard.getQuantiteViande()*Guepard.getNombreAnimaux()) + (Lion.getQuantiteViande()*Lion.getNombreAnimaux()) + (Ours.getQuantiteViande()*Ours.getNombreAnimaux()) + (Tigre.getQuantiteViande()*Tigre.getNombreAnimaux());
+		double quantite_totale_poisson = (Chimpanzes.getQuantitePoisson()*Chimpanzes.getNombreAnimaux()) + (Otarie.getQuantitePoisson()*Otarie.getNombreAnimaux()) + (Ouistiti.getQuantitePoisson()*Ouistiti.getNombreAnimaux()) + (Ours.getQuantitePoisson()*Ours.getNombreAnimaux());
+		double quantite_totale_fourrage = (Antilopes.getQuantiteFourrage()*Antilopes.getNombreAnimaux()) + (Elephant.getQuantiteFourrage()*Elephant.getNombreAnimaux()) + (Girafe.getQuantiteFourrage()*Girafe.getNombreAnimaux()) + (Panda.getQuantiteFourrage()*Panda.getNombreAnimaux()) + (PorcEpic.getQuantiteFourrage()*PorcEpic.getNombreAnimaux()) + (Zebre.getQuantiteFourrage()*Zebre.getNombreAnimaux());
+		double quantite_totale_graines = (Chimpanzes.getQuantiteGraines()*Chimpanzes.getNombreAnimaux()) + (FlamantRose.getQuantiteGraines()*FlamantRose.getNombreAnimaux()) + (Ouistiti.getQuantiteGraines()*Ouistiti.getNombreAnimaux()) + (Perroquets.getQuantiteGraines()*Perroquets.getNombreAnimaux()) + (PorcEpic.getQuantiteGraines()*PorcEpic.getNombreAnimaux()) + (Tortue.getQuantiteGraines()*Tortue.getNombreAnimaux());
 		
 		// On utilise la fonction dans Actions pour calculer le cout total de la nourriture
 		double cout_total = Actions.CalculerCoutTotal(quantite_totale_viande, quantite_totale_poisson, quantite_totale_fourrage, quantite_totale_graines);
