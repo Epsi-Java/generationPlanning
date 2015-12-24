@@ -1,0 +1,42 @@
+• Ce qui a été fait : (pour des détails supplémentaires, il faut regarder la description des comit effectués) 
+<===========================================================================================================>
+
+Modifications sur la classe Animaux
+- Ajout d'attributs
+- Modification du constructeur 
+- Ajout des méthodes get de la classe
+
+Modification de l'appli Main
+- Calcul de la quantité totale par type de nourriture
+- Appel de la fonction permettant de calculer le cout total
+- Génération de fichier
+- Création du contenu du fichier en dynamique (on affiche la quantite de nourriture totale par type de nourriture, puis le cout total. On affichera ensuite le nombre d'intervenants mini et le planning du jour)
+
+Modification de la classe Actions
+- Déplacement de la fonction permettant de déterminer la fréquence du jour en int dans le constructeur de la classe Animaux
+- Suppression de la fonction permettant de calculer la quantité totale de nourriture par type de nourriture. A la place, on créé des variables dans le main contenant le calcul.
+- Modification de la fonction permettant de calculer le cout total de la nourriture : j'ai mis la fonction en static pour qu'on puisse s'en servir dans le main et j'ai modifié les int par des doubles car on aura des chiffres à virgule
+
+<============================================================================================================================>
+
+• A faire dans l'ordre :
+
+/* Création des objets dans le main.java
+- Créer tous les animaux
+- Enlever les commentaires pour le calcul de quantite de nourriture quand on a fini de créer les objets (dans le main.java)
+- Créer d'autres intervenants
+
+/* Création des 2 dernières fonctions principales. Elles ne devraient pas être très longues à coder, on a déjà fait le plus gros je pense
+- Faire la fonction du nb d'intervenants mini
+- Faire la fonction du planning
+
+/* Compléter le contenu du fichier généré */
+- Avec le nombre d'intervenants mini 
+- Le planning du jour 
+Osef de l'affichage et de l'interface graphique
+
+/* Création du compte-rendu qu'il faudra envoyer au prof */
+- Avec le rendu jalon 1
+- Le projet en .zip
+- Un résumé du déroulement du projet (difficultés rencontrées, solutions apportées, remarques pertinentes sur les solutions)
+- Propositions d'amélioration du projet autant d'un point de vue fonctionnel que technique (optimisation du code)
