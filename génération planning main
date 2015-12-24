@@ -1,0 +1,22 @@
+double nb_inter_total = nb_inter_mat + nb_inter_soir + 1;
+		
+		String date_actuelle = "24-12-2015";
+		
+		// Génération du Planning pour chaque intervenant
+		for(int i = 1; i< nb_inter_total; i++){
+			// Si i = 1 donc pour le premier intervenant
+			if (i == 1){
+			File planningPatrick = new File("Patrick Suez - "+date_actuelle+".txt");
+			planningPatrick.createNewFile();
+			FileWriter planningWriteP = new FileWriter(planningPatrick);
+			planningWriteP.write(jour + " "+date_actuelle);
+			 planningWriteP.write ("\r\n\r\n");
+			}
+			if (i == 2){
+				File planningPatrick = new File("John Kramer - "+date_actuelle+".txt");
+				planningPatrick.createNewFile();
+				FileWriter planningWriteP = new FileWriter(planningPatrick);
+				planningWriteP.write(jour + " "+date_actuelle);
+				 planningWriteP.write ("\r\n\r\n");
+				}
+		}
