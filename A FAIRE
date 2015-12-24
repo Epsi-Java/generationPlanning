@@ -22,16 +22,19 @@ Création des objets dans le main.java
 - Enlever les commentaires pour le calcul de quantite de nourriture quand on a fini de créer les objets (dans le main.java)
 - Créer d'autres intervenants
 
+Création des 2 dernières fonctions principales. Elles ne devraient pas être très longues à coder, on a déjà fait le plus gros je pense
+- Faire la fonction du nb d'intervenants mini (reste juste l'histoire du jour à gérer)
+
+Compléter le contenu du fichier généré 
+- Avec le nombre d'intervenants mini (idem)
 <============================================================================================================================>
 
 • A faire dans l'ordre :
 
 /* Création des 2 dernières fonctions principales. Elles ne devraient pas être très longues à coder, on a déjà fait le plus gros je pense
-- Faire la fonction du nb d'intervenants mini
 - Faire la fonction du planning
 
 /* Compléter le contenu du fichier généré */
-- Avec le nombre d'intervenants mini 
 - Le planning du jour 
 Osef de l'affichage et de l'interface graphique
 
