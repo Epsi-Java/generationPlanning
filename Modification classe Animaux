@@ -6,8 +6,8 @@ public class Animaux {
 	
 	protected String nom_animal; // le nom de l'animal est repris dans les autres classes, pour l'instant c'est ce que sert d'id j'ai trouvé ça plus pratique je sais pas trop si c'est utile...
 	protected int nb_animaux;
-	protected int duree_nourrir;
-	protected String frequence_repas; // "Chaque soir", "Chaque matin" etc... On doit faire une fonction pour calculer la fréquence. Cette fonction est déjà construite en php dans le fichier java.php
+	protected static int duree_nourrir;
+	protected static String frequence_repas; // "Chaque soir", "Chaque matin" etc... On doit faire une fonction pour calculer la fréquence. Cette fonction est déjà construite en php dans le fichier java.php
 	protected double quantite_viande;
 	protected double quantite_poisson;
 	protected double quantite_fourrage;
@@ -78,12 +78,12 @@ public class Animaux {
 		return nb_animaux;
 	}
 	
-	public int getDureeRepas()
+	public static int getDureeRepas()
 	{
 		return duree_nourrir;
 	}
 	
-	public String getFrequencerepas()
+	public static String getFrequencerepas()
 	{
 		return  frequence_repas;
 	}
