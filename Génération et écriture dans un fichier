@@ -1,0 +1,33 @@
+// A mettre dans le fichier Main.Java
+
+// Là j'ai récupéré les variables des Antilopes et Chimpanzés seulement pour tester si ça marchait ou pas 
+String carac_ant = "Nom animal : "+Antilopes.getNomAnimal()+"\r\n Nombre : "+Antilopes.getNombreAnimaux()+"\r\n Durée à nourrir : "+Antilopes.getDuree_repas()+"\r\n Fréquence repas : "+Antilopes.getFrequencerepas()+"\r\n";
+String carac_chimp = "Nom animal : "+Chimpanzes.getNomAnimal()+"\r\n Nombre : "+Chimpanzes.getNombreAnimaux()+"\r\n Durée à nourrir : "+Chimpanzes.getDuree_repas()+"\r\n Fréquence repas : "+Chimpanzes.getFrequencerepas()+"\r\n";
+		
+		//Generation fichier
+		File generationPlanning = new File("Génération Planning.txt");
+		generationPlanning.createNewFile();
+		
+		// On test si la création a été réussie, si ce n'est pas le cas on affiche qu'il n'existe pas
+		  if (!generationPlanning.exists()) { 
+		      System.out.println("le fichier n'existe pas");
+		      System.exit(1);
+		    }      
+		   
+		  // On écrit dans le fichier pour mettre du contenu sinon le fichier est vide
+		  FileWriter planningWrite = new FileWriter(generationPlanning);
+		  
+		  // On écrit autant de lignes qu'on veut
+		  planningWrite.write(carac_ant);
+		  planningWrite.write ("\r\n\r\n"); 
+		  planningWrite.write(carac_chimp);
+		  
+		  // on arrête l'écriture et on enregistre les modifications
+		  planningWrite.close(); 
+		  
+		  // On affiche les messages consoles au cas ou y'a un problème pour savoir ou se trouve le fichier généré
+		    System.out.println(" Nom du fichier    : "+generationPlanning.getName());
+		    System.out.println(" Chemin du fichier : "+generationPlanning.getPath());
+		    System.out.println(" Chemin absolu     : "+generationPlanning.getAbsolutePath());
+		  // Le fichier généré se trouve dans le workspace d'éclipse dans la racine du projet
+		  // Dans le doute, la ligne generationPlanning.getAbsolutePath() donne sur la console le chemin absolu de ton fichier
