@@ -31,21 +31,31 @@ public class Main {
 		Intervenants John = new Intervenants("Kramer", "John");
 		Intervenants Claude = new Intervenants("Bourgelat", "Claude");
 		
-		// Calcul quantite totale par type de nourriture : on doit le faire ici car on utilise des objets instanciés dans le main
-		double quantite_totale_viande = (Chimpanzes.getQuantiteViande()*Chimpanzes.getNombreAnimaux()) + (Crocodile.getQuantiteViande()*Crocodile.getNombreAnimaux()) + (Guepard.getQuantiteViande()*Guepard.getNombreAnimaux()) + (Lion.getQuantiteViande()*Lion.getNombreAnimaux()) + (Ours.getQuantiteViande()*Ours.getNombreAnimaux()) + (Tigre.getQuantiteViande()*Tigre.getNombreAnimaux());
-		double quantite_totale_poisson = (Chimpanzes.getQuantitePoisson()*Chimpanzes.getNombreAnimaux()) + (Otarie.getQuantitePoisson()*Otarie.getNombreAnimaux()) + (Ouistiti.getQuantitePoisson()*Ouistiti.getNombreAnimaux()) + (Ours.getQuantitePoisson()*Ours.getNombreAnimaux());
-		double quantite_totale_fourrage = (Antilopes.getQuantiteFourrage()*Antilopes.getNombreAnimaux()) + (Elephant.getQuantiteFourrage()*Elephant.getNombreAnimaux()) + (Girafe.getQuantiteFourrage()*Girafe.getNombreAnimaux()) + (Panda.getQuantiteFourrage()*Panda.getNombreAnimaux()) + (PorcEpic.getQuantiteFourrage()*PorcEpic.getNombreAnimaux()) + (Zebre.getQuantiteFourrage()*Zebre.getNombreAnimaux());
-		double quantite_totale_graines = (Chimpanzes.getQuantiteGraines()*Chimpanzes.getNombreAnimaux()) + (FlamantRose.getQuantiteGraines()*FlamantRose.getNombreAnimaux()) + (Ouistiti.getQuantiteGraines()*Ouistiti.getNombreAnimaux()) + (Perroquets.getQuantiteGraines()*Perroquets.getNombreAnimaux()) + (PorcEpic.getQuantiteGraines()*PorcEpic.getNombreAnimaux()) + (Tortue.getQuantiteGraines()*Tortue.getNombreAnimaux());
+		// déclaration des variables de date (jour et impair déclaré a la zeub en attendant que mon pote m'aide pour gérer la date du jour)
+		String jour = "bonjour";
+		Boolean impair = false;
 		
+		// Calcul quantite totale par type de nourriture : on doit le faire ici car on utilise des objets instanciés dans le main
+		double quantite_totale_viande = (Chimpanzes.getQuantiteViande()*Chimpanzes.getNombreAnimaux()*Chimpanzes.getFrJour()) + (Guepard.getQuantiteViande()*Guepard.getNombreAnimaux()*Guepard.getFrJour()) + (Ours.getQuantiteViande()*Ours.getNombreAnimaux()*Ours.getFrJour());
+		double quantite_totale_poisson = (Chimpanzes.getQuantitePoisson()*Chimpanzes.getNombreAnimaux()*Chimpanzes.getFrJour()) + (Otarie.getQuantitePoisson()*Otarie.getNombreAnimaux()*Otarie.getFrJour()) + (Ouistiti.getQuantitePoisson()*Ouistiti.getNombreAnimaux()*Ouistiti.getFrJour()) + (Ours.getQuantitePoisson()*Ours.getNombreAnimaux()*Ours.getFrJour());
+		double quantite_totale_fourrage = (Antilopes.getQuantiteFourrage()*Antilopes.getNombreAnimaux()*Antilopes.getFrJour()) + (Elephant.getQuantiteFourrage()*Elephant.getNombreAnimaux()*Elephant.getFrJour()) + (Girafe.getQuantiteFourrage()*Girafe.getNombreAnimaux()*Girafe.getFrJour()) + (Panda.getQuantiteFourrage()*Panda.getNombreAnimaux()*Panda.getFrJour()) + (PorcEpic.getQuantiteFourrage()*PorcEpic.getNombreAnimaux()*PorcEpic.getFrJour()) + (Zebre.getQuantiteFourrage()*Zebre.getNombreAnimaux()*Zebre.getFrJour());
+		double quantite_totale_graines = (Chimpanzes.getQuantiteGraines()*Chimpanzes.getNombreAnimaux()*Chimpanzes.getFrJour()) + (FlamantRose.getQuantiteGraines()*FlamantRose.getNombreAnimaux()*FlamantRose.getFrJour()) + (Ouistiti.getQuantiteGraines()*Ouistiti.getNombreAnimaux()*Ouistiti.getFrJour()) + (PorcEpic.getQuantiteGraines()*PorcEpic.getNombreAnimaux()*PorcEpic.getFrJour()) + (Tortue.getQuantiteGraines()*Tortue.getNombreAnimaux()*Tortue.getFrJour());
+		if (jour =="lundi"){
+			quantite_totale_viande += (Crocodile.getQuantiteViande()*Crocodile.getNombreAnimaux());
+		}
+		if (impair == true){
+			quantite_totale_graines += (Perroquets.getQuantiteGraines()*Perroquets.getNombreAnimaux());
+			quantite_totale_viande += (Lion.getQuantiteViande()*Lion.getNombreAnimaux());
+		}
+		if (jour == "Mardi" || jour =="Vendredi"){
+			quantite_totale_viande += (Tigre.getQuantiteViande()*Tigre.getNombreAnimaux());
+		}
 		// On utilise la fonction dans Actions pour calculer le cout total de la nourriture
 		double cout_total = Actions.CalculerCoutTotal(quantite_totale_viande, quantite_totale_poisson, quantite_totale_fourrage, quantite_totale_graines);
 		
 		// déclaration des variables utilisées pour le calcul du nombre d'intervenants
 		String frequence_repas = Animaux.getFrequencerepas();
 		int duree_nourrir = Animaux.getDureeRepas();
-		// jour et impair déclaré a la zeub en attendant que mon pote m'aide pour gérer la date du jour
-		String jour = "bonjour";
-		Boolean impair = false;
 		
 		// On utilise la fonction dans Actions pour le nombre d'intervenants
 		double nb_inter_mat = Actions.CalculerIntervenantMatin(frequence_repas, duree_nourrir, jour, impair);
