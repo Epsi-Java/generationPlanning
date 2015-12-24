@@ -17,14 +17,14 @@ Modification de la classe Actions
 - Suppression de la fonction permettant de calculer la quantité totale de nourriture par type de nourriture. A la place, on créé des variables dans le main contenant le calcul.
 - Modification de la fonction permettant de calculer le cout total de la nourriture : j'ai mis la fonction en static pour qu'on puisse s'en servir dans le main et j'ai modifié les int par des doubles car on aura des chiffres à virgule
 
-<============================================================================================================================>
-
-• A faire dans l'ordre :
-
-/* Création des objets dans le main.java
+Création des objets dans le main.java
 - Créer tous les animaux
 - Enlever les commentaires pour le calcul de quantite de nourriture quand on a fini de créer les objets (dans le main.java)
 - Créer d'autres intervenants
+
+<============================================================================================================================>
+
+• A faire dans l'ordre :
 
 /* Création des 2 dernières fonctions principales. Elles ne devraient pas être très longues à coder, on a déjà fait le plus gros je pense
 - Faire la fonction du nb d'intervenants mini
